@@ -13,13 +13,21 @@ docker build . -t local/kubernetes-debug-pod
 ## Local - docker only
 
 ``` bash
+# Start with bash
+docker run -i -t local/kubernetes-debug-pod /bin/bash
+
+# Start with zsh
 docker run -i -t local/kubernetes-debug-pod /bin/bash
 ```
 
 ## Remote - deploy to Kubernetes
 
 ``` bash
+# Start with bash
 kubectl run ubuntu --image=zonedbit/kubernetes-debug-pod --rm -it --restart=Never /bin/bash
+
+# Start with zsh
+kubectl run ubuntu --image=zonedbit/kubernetes-debug-pod --rm -it --restart=Never /bin/zsh
 ```
 
 ### Explanation
