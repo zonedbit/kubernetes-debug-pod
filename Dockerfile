@@ -9,6 +9,7 @@ RUN apt-get update -y \
                               kafkacat \
                               zsh \
                               git \
+                              vim \
         && apt-get purge \
         && apt-get clean
 

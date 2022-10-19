@@ -17,7 +17,7 @@ docker build . -t local/kubernetes-debug-pod
 docker run -i -t local/kubernetes-debug-pod /bin/bash
 
 # Start with zsh
-docker run -i -t local/kubernetes-debug-pod /bin/bash
+docker run -i -t local/kubernetes-debug-pod /bin/zsh
 ```
 
 ## Remote - deploy to Kubernetes
