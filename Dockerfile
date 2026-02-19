@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 RUN apt-get update -y \
         && apt-get install -y mtr-tiny \
@@ -10,10 +10,15 @@ RUN apt-get update -y \
                               zsh \
                               git \
                               vim \
+                              tmux \
+                              openssh-client \
         && apt-get purge \
         && apt-get clean
+
+
+USER ubuntu
 
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # start zsh
-CMD [ "zsh" ]
+CMD ["zsh"]
