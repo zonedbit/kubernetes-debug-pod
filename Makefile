@@ -17,7 +17,7 @@ build:
 
 .PHONY: run
 run:
-	podman run -it --rm $(REGISTRY)/$(IMAGE_NAME):$(IMAGE_TAG) zsh
+	podman run -it --rm --cap-drop=ALL $(REGISTRY)/$(IMAGE_NAME):$(IMAGE_TAG) zsh
 
 .PHONY: clean
 clean:
