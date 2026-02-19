@@ -15,7 +15,6 @@ RUN apt-get update -y \
         && apt-get purge \
         && apt-get clean
 
-
 USER ubuntu
 
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
